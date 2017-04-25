@@ -134,7 +134,7 @@ Here is result of above code
 
 ![alt text][image10]
 
-**Cell 20:** Heatmap
+**Cell 20-21:** Heatmap
 
 In cells 22-23 I built a heat-map from slide window detections in order to combine overlapping detections and remove false positives.
 
@@ -156,9 +156,7 @@ Here's a [link to my video result](./test_video_out_2.mp4)
 
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
-I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
-
-Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
+In Cell 20-21 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions. I have then 
 
 ---
 
@@ -166,5 +164,8 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+I have tested many parameters before i have chosen right ones. Depending on parameters I had Python ValueError: "ValueError: operands could not be broadcast together with shapes
+ (1,4308) (3564,) (1,4308)". This was due different parameter settings of Training Classifier and Evaluation of data. Parameters during training data and evaluation needs to be same.
+
+My pipeline is doing good but you can see that there Windows fallowing cars are twitching this can be improved by adding more training data, using different classifier and fine tuning Parameters (increasing window search, spatial size, etc…). In addition to this i my code is robust and definitely can be improved (cells are repeating, functions are copied etc..). Most of the thing I did ware due testing purposes and I did not want to delete them.
 

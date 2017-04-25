@@ -70,15 +70,15 @@ Here is example of normalized features of image using the `RGB` color space and 
 
 ![alt text][image6]
 
-####2. Explain how you settled on your final choice of HOG parameters.
+#### 2. Explain how you settled on your final choice of HOG parameters.
 
 I tried various combinations of parameters and...
 
-####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using parameters:
+I trained a linear SVM using parameters in cell 14.
 
-color_space = 'YUV' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
+```color_space = 'YUV' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
 
 orient = 11 # HOG orientations
 
@@ -99,6 +99,9 @@ hist_feat = True # Histogram features on or off
 hog_feat = True # HOG features on or off
 
 y_start_stop = [None, None] # Min and max in y to search in slide_window()
+```
+
+While training linear SVM i have tested results 
 
 ###Sliding Window Search
 

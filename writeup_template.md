@@ -156,7 +156,7 @@ Here's a [link to my video result](./test_video_out_2.mp4)
 
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
-In Cell 20-21 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions. I have then 
+In Cell 20-21 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.
 
 ---
 
@@ -167,5 +167,5 @@ In Cell 20-21 I recorded the positions of positive detections in each frame of t
 I have tested many parameters before i have chosen right ones. Depending on parameters I had Python ValueError: "ValueError: operands could not be broadcast together with shapes
  (1,4308) (3564,) (1,4308)". This was due different parameter settings of Training Classifier and Evaluation of data. Parameters during training data and evaluation needs to be same.
 
-My pipeline is doing good but you can see that there Windows fallowing cars are twitching this can be improved by adding more training data, using different classifier and fine tuning Parameters (increasing window search, spatial size, etc…). In addition to this i my code is robust and definitely can be improved (cells are repeating, functions are copied etc..). Most of the thing I did ware due testing purposes and I did not want to delete them.
+My pipeline is doing good but you can see that there Windows fallowing cars are twitching this can be improved by adding more training data, using different classifier and fine tuning Parameters (increasing window search, spatial size, etc…). In addition to this i my code is robust and definitely can be improved (cells are repeating, functions are copied etc..). Most of the thing I did ware due testing/research purposes and I did not want to delete them.
 

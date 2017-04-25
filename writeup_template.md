@@ -19,7 +19,8 @@ The goals / steps of this project are the following:
 [image4]: ./examples/cars_histogram.jpg
 [image5]: ./examples/non_cars_histogram.jpg
 [image6]: ./examples/normalized_features.jpg
-[image7]: ./examples/output_bboxes.png
+[image7]: ./examples/example_image.jpg
+[image8]: ./examples/example_image_windows.jpg
 [video1]: ./project_video.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
@@ -93,9 +94,24 @@ y_start_stop = [None, None] # Min and max in y to search in slide_window()
 
 While training linear SVM i have tested parameters tuning to get best results. Final parameters that showed **98,96%** Test Accuracy are in above cell.  
 
-###Sliding Window Search
+### Sliding Window Search
 
-####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+#### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+
+**Cell 15:** in this cell i have created function `draw boxes` and `slide_window` that that takes an image  start and stop positions in both x and y, window size (x and y dimensions),  and overlap fraction (for both x and y)
+
+**Cell 16:** Random example image that will be used to slide window search
+
+![alt text][image7]
+
+**Cell 17:** Example of Slide all windows over image.
+
+![alt text][image8]
+
+**Cell 18:**
+
+
+**Cell 19:**
 
 I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
 

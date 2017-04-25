@@ -21,6 +21,12 @@ The goals / steps of this project are the following:
 [image6]: ./examples/normalized_features.jpg
 [image7]: ./examples/example_image.jpg
 [image8]: ./examples/example_image_windows.jpg
+[image9]: ./examples/slide_windows.jpg
+[image10]: ./examples/slide_windows.jpg
+[image11]: ./examples/slide_windows.jpg
+[image12]: ./examples/slide_windows.jpg
+
+
 [video1]: ./project_video.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
@@ -108,8 +114,9 @@ While training linear SVM i have tested parameters tuning to get best results. F
 
 ![alt text][image8]
 
-**Cell 18:**
+**Cell 18 - 19:** defined functions `single_img_features` and `search_windows` that extract features from a single image window. This function is very similar to extract_features() just for a single image rather than list of images. Here is example of search window and as you can see predictions are not that great. 
 
+![alt text][image9]
 
 **Cell 19:**
 

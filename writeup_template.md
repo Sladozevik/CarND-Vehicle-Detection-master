@@ -129,7 +129,7 @@ ystop = 656
 ```
 I have also used for loop to use scale of search window from 1 to 2.5 with step of 0.1.
 ```
-for i in np.arange(1,2.5,0.1):
+for i in np.arange(1,2.0,0.1):
     scale = i
     out_img, recktangles = find_cars(img, ystart, ystop, scale, svc, X_scaler, 
                     orient, pix_per_cell, cell_per_block, spatial_size, hist_bins)
@@ -159,7 +159,7 @@ Ultimately I searched on two scales using YUV 3-channel HOG features plus spatia
 ### Video Implementation
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./test_video_out_2.mp4)
 
 
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.

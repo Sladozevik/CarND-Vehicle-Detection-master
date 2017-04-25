@@ -22,9 +22,9 @@ The goals / steps of this project are the following:
 [image7]: ./examples/example_image.jpg
 [image8]: ./examples/example_image_windows.jpg
 [image9]: ./examples/slide_windows.jpg
-[image10]: ./examples/slide_windows.jpg
-[image11]: ./examples/slide_windows.jpg
-[image12]: ./examples/slide_windows.jpg
+[image10]: ./examples/pipeline_image.jpg
+[image11]: ./examples/heatmap.jpg
+[image12]: ./examples/pipeline.jpg
 
 
 [video1]: ./project_video.mp4
@@ -120,9 +120,9 @@ While training linear SVM i have tested parameters tuning to get best results. F
 
 ## Pipeline
 
-in **Cell 20** I have created pipeline that consists of function `find_cars`. This single function that can extract features using hog sub-sampling and make predictions
+in **Cell 20** I have created function `find_cars`. This single function that can extract features using hog sub-sampling and make predictions
 
-I have tested function `find_cars` with windows search area of 
+I have tested function `find_cars` with windows search area of:
 ```
 ystart = 400
 ystop = 656  
@@ -140,11 +140,18 @@ Here is result of above code
 
 ![alt text][image10]
 
-####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
+#### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
+
+### Heatmap
+
+![alt text][image11]
+
+### Pipeline
 
 Ultimately I searched on two scales using YUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
-![alt text][image4]
+![alt text][image12]
+
 ---
 
 ### Video Implementation

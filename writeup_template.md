@@ -25,9 +25,7 @@ The goals / steps of this project are the following:
 [image10]: ./examples/pipeline_image.jpg
 [image11]: ./examples/heatmap.jpg
 [image12]: ./examples/pipeline.jpg
-
-
-[video1]: ./project_video.mp4
+[video1]: ./test_video_out_2.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -35,16 +33,18 @@ The goals / steps of this project are the following:
 ---
 ### Writeup / README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
-You're reading it!
+#### 1. This is writeup that includes all the rubric points and how i have addressed each one.
 
 #### Import Modules, Load images and show images that we will work on
 
-As a first step in cell 1 to 3 I have imported modules for project, loaded images from folders and showed radnomly 10 images from Cars and Non Cars data set. 
+As a first step in cell 1 to 3 I have imported modules for project, loaded images from folders and showed randomly 10 images from Cars and Non Cars data set. 
 Here is example of Cars and Non Cars images:
 
 ![alt text][image1]
+
+Number of Car images 8792
+
+Number of Non-Car images 8968
 
 ### Histogram of Oriented Gradients (HOG)
 
@@ -77,11 +77,7 @@ Here is example of normalized features of image using the `RGB` color space and 
 
 ![alt text][image6]
 
-#### 2. Explain how you settled on your final choice of HOG parameters.
-
-I tried various combinations of parameters and...
-
-#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+#### 2. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained a linear SVM using parameters in cell 14.
 
@@ -118,16 +114,14 @@ While training linear SVM i have tested parameters tuning to get best results. F
 
 ![alt text][image9]
 
-## Pipeline
-
-in **Cell 20** I have created function `find_cars`. This single function that can extract features using hog sub-sampling and make predictions
+**Cell 20:** I have created function `find_cars`. This single function that can extract features using hog sub-sampling and make predictions
 
 I have tested function `find_cars` with windows search area of:
 ```
 ystart = 400
 ystop = 656  
 ```
-I have also used for loop to use scale of search window from 1 to 2.5 with step of 0.1.
+I have also used for loop to use scale of search window from 1 to 2.0 with step of 0.1.
 ```
 for i in np.arange(1,2.0,0.1):
     scale = i
@@ -140,9 +134,7 @@ Here is result of above code
 
 ![alt text][image10]
 
-#### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
-
-### Heatmap
+**Cell 20:** Heatmap
 
 In cells 22-23 I built a heat-map from slide window detections in order to combine overlapping detections and remove false positives.
 

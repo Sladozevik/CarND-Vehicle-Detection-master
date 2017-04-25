@@ -118,15 +118,31 @@ While training linear SVM i have tested parameters tuning to get best results. F
 
 ![alt text][image9]
 
-**Cell 19:**
+## Pipeline
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
+in **Cell 20** I have created pipeline that consists of function `find_cars`. This single function that can extract features using hog sub-sampling and make predictions
 
-![alt text][image3]
+I have tested function `find_cars` with windows search area of 
+```
+ystart = 400
+ystop = 656  
+```
+I have also used for loop to use scale of search window from 1 to 2.5 with step of 0.1.
+```
+for i in np.arange(1,2.5,0.1):
+    scale = i
+    out_img, recktangles = find_cars(img, ystart, ystop, scale, svc, X_scaler, 
+                    orient, pix_per_cell, cell_per_block, spatial_size, hist_bins)
+    recktangles_test += recktangles
+```
+
+Here is result of above code
+
+![alt text][image10]
 
 ####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+Ultimately I searched on two scales using YUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
 ![alt text][image4]
 ---

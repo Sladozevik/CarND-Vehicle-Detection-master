@@ -1,5 +1,3 @@
-##Writeup Template
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
@@ -55,7 +53,7 @@ First u created function `get_hog_features` and after i i used it to read all th
 
 ### Color Histogram 
 
-in cells 7 I have built functions `color_histmg` and `bin_spatial`. `color_histmg` is to extract histogram of color channels and  `bin_spatial` to to compute binned color features.
+In cells 7 I have built functions `color_histmg` and `bin_spatial`. `color_histmg` is to extract histogram of color channels and  `bin_spatial` to to compute binned color features.
 in cells 8 and 9 i have shown Cars and Non Cars histogram:
  
 ![alt text][image4]
@@ -68,14 +66,9 @@ In cells 10 - 13 i have built function `extract_features`
 
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
-Here is example of normalized features of image:
+Here is example of normalized features of image using the `RGB` color space and HOG parameters of `orientations=9`, `pixels_per_cell=8` and `cells_per_block=2`:
 
 ![alt text][image6]
-
-Here is an example using the `YCrCb` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
-
-
-![alt text][image2]
 
 ####2. Explain how you settled on your final choice of HOG parameters.
 
